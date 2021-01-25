@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <!-- <property name="LOG_HOME" value="${LOG_PATH}/Application"/>  -->
+    <property name="LOG_PATTERN" value="%d{[yyyy-MM-dd HH:mm:ss]} [%thread] %-5level %logger{36} - %msg%n"/>
+    
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+	
+    <logger name="com.river" level="INFO" dditivity="false"/>
+    <logger name="org.springframework" level="INFO" dditivity="false"/>
+    <logger name="org.h2.*" level="INFO" dditivity="false"/>
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

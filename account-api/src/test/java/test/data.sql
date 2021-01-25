@@ -1,0 +1,1 @@
+insert into account (accountNumber, blance) values('a12345', '12.6');
